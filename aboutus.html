@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ABOUT US</title>
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css"
+            integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm"
+            crossorigin="anonymous">
+        <link rel="stylesheet" href="aboutus.css">
+
+        <header>
+            <h2 class="title" style="color: white;">
+                <img
+                    src="images/logoIcon.png"
+                    style="height: 80px; width: 100px; margin-right: 10px;">phiz<span class="spanny">Tune</span>
+
+            </h2>
+            <nav class="navigation">
+                <a href="home.php"><img src="images/homeicon.png" style="height: 2opx; width: 20px;">HOME</a>
+                <a href="musicworld.php"><img src="images/loginicon.png" style="height: 2opx; width: 20px;">MUSIC WORLD</a>
+                <a href="musicplaylist.php"><img src="images/musiicon.png" style="height: 2opx; width: 20px;">MUSIC PLAYLIST</a>
+                <a href="myinfo.php"><img src="images/musiicon.png" style="height: 2opx; width: 20px;">MY INFO</a>
+                <a href="aboutus.html"><img src="images/aboutusicon.png" style="height: 2opx; width: 20px;">ABOUT US</a>
+            </nav>
+        </header>
+
+    </head>
+    <body>
+        
+
+        <div class="heading">
+            <h1>About Us</h1>
+            <p>The world rock music provider our phizTune</p>
+        </div>
+        <section class="about-us">
+            <img src="images/about-us.png">
+            <div class="content">
+                <h2>Here is my decription about company</h2>
+                <p>The long essay hover here</p>
+                <button class="read-more-button" onclick="navigateToWebsite()">Read More</button>
+            </div>
+
+        </section><br><br>
+        
+        <section class="contact-us">
+
+            
+            <div class="content2">
+                <h2>Contact us</h2>
+                <p>THE IS THE FORM TO BE FILLED</p>
+            </div>
+            <div class="container-contact">
+                <div class="contactInfo">
+                    <div class="box">
+                        <div class="icon">
+                            <ion-icon name="map-outline"></ion-icon>
+                        </div>
+                        <div class="text">
+                            <h3>Address</h3>
+                            <p>IPOH,PERAK,MALAYSIA</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="icon">
+                            <ion-icon name="call-outline"></ion-icon>
+                        </div>
+                        <div class="text">
+                            <h3>Phone</h3>
+                            <p>011-11226067</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="icon">
+                            <ion-icon name="archive-outline"></ion-icon>
+                        </div>
+                        <div class="text">
+                            <h3>Email</h3>
+                            <p>phizTune00@gmail.com</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="contactForm">
+                    <form action="feedback.php" method="post">
+                        <h2>Send Messages</h2>
+                        <div class="inputBox">
+                            <textarea required="required" name="message"></textarea>
+                            <span>Type your Messages here..</span>
+                        </div>
+                        <div class="inputBox">
+                            <input type="submit" name="submit" value="Send" onclick="openPopup()">
+                        </form>
+                            <div class="popup" id="popup">
+                                <img src="images/tick.png" style="width: 50px; height: 50px;">
+                                <h2>Thank you!</h2>
+                                <p>Your details have been successfullt submitted.Thanks!</p>
+                                <button type="button" onclick="closePopup()">OK</button>
+                            </div>
+                            
+
+                        </div>
+                    
+                </div>
+            </div>
+
+        </section>
+
+        <section class="content3">
+            <h1>THE TEAM MEMBER</h1>
+
+            <figure class="snip1584"><img src="images/bruno1.jpg" alt="sample87" height="300px"/>
+                <figcaption>
+                  <h3>SEBASTIAN RAJ(THE LEADER)</h3>
+                  <h5>Is he a man, monster or both? The jury is still out on that one, but fans have decided that this cover by Jack Kirby is one of Marvel's best!</h5>
+                </figcaption><a href="#"></a>
+              </figure>
+              <figure class="snip1584 "><img src="images/weekend1.jpeg"alt="sample119" height="300px" />
+                <figcaption>
+                  <h3>AGAESHRAO(WEB DEVELOPER)</h3>
+                  <h5>The first appearance of Wolverine! And he throws down in one of Marvel's greatest battles with the Incredible Hulk! &amp; Vision</h5>
+                </figcaption><a href="#"></a>
+              </figure>
+              <figure class="snip1584"><img src="images/justin.jpg" alt="sample120" height="300px"/>
+                <figcaption>
+                  <h3>AHMAD AFIF (IT COORDINATOR)</h3>
+                  <h5>Just as Bruce is freed from the Hulk's curse, trouble arises at the Gamma Base. The Leader returns- and imprisons Colonel Ross and Doc Samson!</h5>
+                </figcaption><a href="#"></a>
+              </figure>
+
+        </section>
+
+        <script>
+            function navigateToWebsite() {
+                window.location.href = "https://www.healthline.com/health-news/mental-listening-to-music-lifts-or-rein" +
+                        "forces-mood-051713";
+            }
+
+            function isElementInViewport(element) {
+                var rect = element.getBoundingClientRect();
+                return (
+                    rect.top >= 0 && rect.left >= 0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+                );
+            }
+
+            window.addEventListener("scroll", function () {
+                var contactForm = document.querySelector(".contact-us .contactForm");
+                if (isElementInViewport(contactForm)) {
+                    contactForm
+                        .classList
+                        .add("slide-in");
+                }
+            });
+
+            let popup = document.getElementById("popup");
+            function openPopup()
+            {
+                popup.classList.add("open-popup");
+
+            }
+            function closePopup()
+            {
+                popup.classList.remove("open-popup");
+
+            }
+        </script>
+        <script
+            type="module"
+            src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script
+            nomodule="nomodule"
+            src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    </body>
+</html>

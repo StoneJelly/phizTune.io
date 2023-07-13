@@ -1,0 +1,380 @@
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+header {
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+width: 100%;
+
+display: flex;
+
+align-items: center;
+z-index: 99;
+transition: background-color 0.3s, box-shadow 0.3s, border-radius 0.3s;
+}
+
+header:hover {
+background: linear-gradient(to bottom, rgba(0, 62, 92, 0.9), rgba(1, 25, 38, 0.9));
+-webkit-box-shadow: 0px 0px 20px 5px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 0px 20px 5px rgba(0,0,0,0.75);
+box-shadow: 0px 0px 20px 5px rgba(0,0,0,0.75);
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 8px;
+animation: bounceAnimation 0.8s ease-in-out;
+
+}
+@keyframes bounceAnimation {
+0% {
+   transform: translateY(-10px);
+}
+50% {
+   transform: translateY(5px);
+}
+80% {
+   transform: translateY(0);
+}
+}
+
+
+.btnlogin
+{
+margin-top: 10px;
+}
+.signup-button {
+height: 50px;
+position: relative;
+border: 2px solid black;
+border-radius: 5px;
+color: white;
+background-color: transparent;
+cursor: pointer;
+width: 150px;
+margin-left: 300px;
+
+
+
+}
+
+.signup-button:hover {
+background-color: #0056b3;
+}
+
+.signup-button a {
+display: flex;
+align-items: center;
+justify-content: center;
+height: 100%;
+width: 100%;
+color: white;
+text-decoration: none;
+}
+
+.signup-button:hover a {
+color: white;
+}
+
+
+.title
+{
+font-size: 30px;
+user-select: none;
+}
+
+.navigation {
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.navigation a {
+position: relative;
+font-size: 1.1em;
+color: white;
+text-decoration: none;
+font-weight: 500;
+margin-left: 40px;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.navigation a::after{
+content:'' ;
+position: absolute;
+left: 0;
+bottom: -6px;
+width: 100%;
+height: 3px;
+background: white;
+border-radius: 5px;
+transform-origin: right;
+transform: scaleX(0);
+color: #78ffd6;
+transition: transform .5s;
+}
+
+.navigation a:hover::after{
+color: #78ffd6;
+transform-origin: left;
+transform: scaleX(1);
+
+} 
+.spanny{
+color: #78ffd6;
+}
+
+@media only screen and (min-width: 884px) {
+
+
+.title {
+    font-size: 24px;
+}  
+
+.navigation a {
+    font-size: 0.9em;
+    margin-left: 30px;
+}
+}
+
+body
+{
+background: url(images/bg3.jpg);
+background-position: center;
+background-repeat: none;
+background-size: cover;
+padding-top: 50px; 
+width: 100%;
+}
+
+.maincontent {
+  background: linear-gradient(to bottom, rgba(0, 62, 92, 0.8), rgba(1, 25, 38, 0.8));
+  margin-top: 100px;
+  margin-left: 20%;
+  margin-bottom: 100px;
+  color: white;
+  width: 800px;
+  height: 450px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+  border-radius: 20px;
+  /* Add other styling properties for the container */
+}
+@media (max-width: 768px) {
+  .maincontent {
+    width: 90%;
+    margin-left: 5%;
+  }
+}
+
+.logo
+{
+  padding-left: 50%;
+  background: linear-gradient(to bottom, rgba(0, 62, 92, 0.9), rgba(1, 25, 38, 0.9));
+  -webkit-box-shadow: 0px 0px 20px 5px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 20px 5px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 20px 5px rgba(0,0,0,0.75);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 8px;
+  
+  
+  
+}
+.button-container {
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
+  margin-left: 500px;
+
+  
+}
+
+.login-button,
+.signup-button {
+  height: 50px;
+  margin-bottom: 0px;
+  border: 2 px solid black;
+  border-radius: 5px;
+  color: white;
+  background-color: transparent;
+  cursor: pointer;
+  width: 150px;
+  margin-top: -70px;
+}
+
+.login-button:hover,
+.signup-button:hover {
+  background-color: #0056b3;
+}
+
+.content {
+  margin-top: 250px;
+  padding-left: 400px;
+  text-align: center;
+  text-decoration: double;
+  animation-name: slideDown;
+  animation-duration: 1.0s;
+  animation-delay: 1.0s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes slideDown {
+  0% {
+    margin-top: -250px;
+    opacity: 0;
+  }
+  100% {
+    margin-top: -350px;
+    opacity: 1;
+  }
+}
+
+.glow-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 0 rgba(0, 123, 255, 0.6);
+}
+
+.glow-button:before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, #007bff 0%, transparent 80%);
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.3s ease;
+}
+
+.glow-button:hover {
+  background-color: #0056b3;
+}
+
+.glow-button:hover:before {
+  opacity: 1;
+}
+
+.glow-button:focus {
+  outline: none;
+  box-shadow: 0 0 10px 5px rgba(0, 123, 255, 0.6);
+}
+
+.glow-button:focus:before {
+  opacity: 1;
+}
+
+.glow-button:active {
+  transform: scale(0.98);
+}
+
+.glow-button:active:before {
+  opacity: 0.8;
+}
+
+.splash-screen {
+  position: absolute;
+  /* top: 0;
+  left: 0; */
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  transition: opacity 0.8s ease;
+}
+
+.splash-screen.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.maincontent2
+{
+  margin-top: 100px;
+ margin-block-start: 1px;
+  background-color: #011926;
+  height: 700px;
+}
+
+.container {
+  display: flex;
+  gap: 80px;
+
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 100px;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  text-align: center;
+  margin: 20px auto;
+  transition: transform 0.3s ease;
+}
+
+.box:hover {
+  background-color: #d3d3d3;
+  transform: scale(1.1);
+}
+
+.box img {
+  width: 150px;
+  height: 100px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.box img:hover {
+  transform: scale(1.5);
+}
+
+.description {
+  margin-top: 10px;
+}
+
+.description h3 {
+  margin: 0;
+}
+
+.description p {
+  margin: 0;
+}
+
+.item1{
+  margin-top: 10px;
+
+}
+
+.desc1{
+  background-color: gray;
+  color: white;
+  width: 50%;
+  height: 300px;
+  margin-top: -305px;
+  margin-left: 50%;
+}
